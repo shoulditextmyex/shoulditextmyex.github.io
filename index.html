@@ -3,19 +3,53 @@
 
 <head>
 
+
+
 <title>❀･t･h･a･n･k･u,･n･e･x･t･</title>
+	
+  <script type="text/javascript" src="jquery.js"></script> 
+  <script>
+  	$( document ).ready(function() {
+
+		$( ".thankunext" ).click(function() {
+  		$( "body" ).addClass( "buthewasntamatch" );
+		});
+	});
+
+</script>
+<link rel="stylesheet" href="https://use.typekit.net/ink6lgt.css">
+
+
+
+
+
 	<style>
+
 
 		body {
 			background-color:#FFE0E0;
 			display: flex;
+	
   align-items: center;
   justify-content: center;
+
+
+		}
+
+		p {
+			font-family: giza-five, serif;
+
+
+		}
+
+		.buthewasntamatch {
+			background-image: url(https://media.giphy.com/media/yuQKP8N2MIi5fdZkrs/giphy.gif);
+    background-size: 50%;
 		}
 
 		.no {
 			font-family:Georgia, Times New Roman;
-			font-size:100px;
+			font-size:180px;
 			color:#8084C1;
 			margin:0 auto;
 			width:auto;
@@ -26,6 +60,26 @@
  
 		}
 
+
+		.idunno {
+			margin: 0 auto;
+		    max-width: 50%;
+		    padding: 40px 0;
+		    color: #e68bd3;
+		        text-decoration: underline;
+		        opacity:.6;
+		}
+
+		.idunno:hover {
+			cursor: pointer;
+		}
+
+		.thankunext {
+			width:500px;
+			max-width:100%;
+			height:200px;
+			max-width:100%;
+		}
 	::-moz-selection { /* Code for Firefox */
     color: white;
     background: #CFD2FF;
@@ -35,18 +89,34 @@
     color: white; 
     background: #CFD2FF;
 }
+
+* {cursor: url("http://cur.cursors-4u.net/nature/nat-10/nat934.cur"), auto;} 
+
+
+
 	</style>
 
 
 </head>
 
 <body>
+
+<div class="thankunext">
 <p class="no">
 	No
 </p>
 
+<p class="idunno">
+<a >but i want to</a>
+</p>
+</div>
+
+
+<iframe src="silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+
+
 <audio autoplay="autoplay"  loop>
-      <source src="ari.mp3">
+      <source src="ari.mp3"  type="audio/mp3">
 </audio>
 
 
@@ -60,11 +130,14 @@
 
 </body>
 
+
+
+
 	<script>
 
 
 var colour="random"; // "random" can be replaced with any valid colour ie: "red"...
-var sparkles=100;// increase of decrease for number of sparkles falling
+var sparkles=1000;// increase of decrease for number of sparkles falling
 
 var x=ox=400;
 var y=oy=300;
@@ -80,7 +153,7 @@ var tinyx=new Array();
 var tinyy=new Array();
 var tinyv=new Array();
 
-colours=new Array('#ff0000','#00ff00','#ffffff','#ff00ff','#ffa500','#ffff00','#00ff00','#ffffff','ff00ff')
+colours=new Array('#FF8C8C','#FF4E4E','#FF5CEC','#7C5CFF','#FFE6C6','#C6FFDB','#FFF0C6','#FFCAC6')
 
 n = 10;
 y = 0;
@@ -331,6 +404,7 @@ function newColour() {
 })();
 
 </script>
+
 
 
 </html>
