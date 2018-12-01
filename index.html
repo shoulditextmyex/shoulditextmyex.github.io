@@ -8,11 +8,27 @@
 <title>❀･t･h･a･n･k･u,･n･e･x･t･</title>
 	
   <script type="text/javascript" src="jquery.js"></script> 
+  <script type="text/javascript" src="sparkle.js"></script> 
   <script>
   	$( document ).ready(function() {
 
 		$( ".thankunext" ).click(function() {
-  		$( "body" ).addClass( "buthewasntamatch" );
+  			$( "body" ).addClass( "buthewasntamatch" );
+  			$( ".gotsomuchlove" ).css( "opacity","1" );
+
+		});
+
+
+		$( ".gotsomuchlove" ).click(function() {
+  			$( "body" ).addClass( "bendandsnap" );
+  			$( ".turntoutamazing" ).css( "opacity","1" );
+
+		});
+
+		$( ".turntoutamazing" ).click(function() {
+  			$( "body" ).addClass( "love" );
+  			$( ".hernameisari" ).css( "opacity","1" );
+
 		});
 	});
 
@@ -47,13 +63,27 @@
     background-size: 50%;
 		}
 
+		.bendandsnap {
+			background-image: url("https://media.giphy.com/media/4WFPk7Bvkr8gbUDXfK/giphy.gif");
+   		 background-size: 50%;
+		}
+
+		.love {
+			background-image: url("bendandsnap.gif");
+   		 background-size: 50%;
+		}
+
+.center {
+	    max-width: 50%;
+	    text-align:center;
+
+}
 		.no {
 			font-family:Georgia, Times New Roman;
-			font-size:180px;
+			font-size:240px;
 			color:#8084C1;
 			margin:0 auto;
 			width:auto;
-			  max-width: 50%;
 			  text-transform:uppercase;
 			  font-weight:600;
 			  letter-spacing:4px;
@@ -61,23 +91,36 @@
 		}
 
 
-		.idunno {
-			margin: 0 auto;
-		    max-width: 50%;
-		    padding: 40px 0;
-		    color: #e68bd3;
-		        text-decoration: underline;
-		        opacity:.6;
+		.idunno, .gotsomuchlove, .turntoutamazing {
+    margin: 0 auto;
+    padding: 20px 40px;
+    color: #e68bd3;
+    text-decoration: underline;
+      transition: 0.3s;
+
 		}
 
-		.idunno:hover {
-			cursor: pointer;
+		.idunno:hover, .gotsomuchlove:hover, .turntoutamazing:hover {
+			cursor: pointer !important;
+
+		}
+
+		.gotsomuchlove, .turntoutamazing, .hernameisari {
+			opacity:0;
+		}
+
+		 a {
+			color:white;
+		}
+
+		a .hernameisari {
+			color:pink;
 		}
 
 		.thankunext {
 			width:500px;
 			max-width:100%;
-			height:200px;
+			height:auto;
 			max-width:100%;
 		}
 	::-moz-selection { /* Code for Firefox */
@@ -90,7 +133,54 @@
     background: #CFD2FF;
 }
 
-* {cursor: url("http://cur.cursors-4u.net/nature/nat-10/nat934.cur"), auto;} 
+/* * {cursor: url("http://cur.cursors-4u.net/nature/nat-10/nat934.cur"), auto;} */
+
+
+
+
+$buttonBackground: #2c3e50;
+$buttonColor: rgba(255,255,255,1);
+
+.sparkley {
+
+  background: lighten( $buttonBackground , 10% );
+  color: $buttonColor;
+  border: none;
+
+  padding: 16px 36px;
+  font-weight: normal;
+  
+  border-radius: 3px;
+  transition: all 0.25s ease;
+  
+  box-shadow: 0 38px 32px -23px black;
+  margin: 0 1em 1em;
+  
+  &:hover {
+   
+    background: $buttonBackground;
+    color: transparentize( $buttonColor,0.8 );
+    
+  }
+  
+}
+
+
+
+
+
+
+
+.img {
+
+  			margin:0 auto;
+			width:auto;
+			  max-width: 50%;
+
+
+}
+
+
 
 
 
@@ -101,16 +191,31 @@
 
 <body>
 
-<div class="thankunext">
-<p class="no">
-	No
-</p>
+<div class="img " >
+	<div class="thankunext center">
+		<p class="no">
+			No
+		</p>
 
-<p class="idunno">
-<a >but i want to</a>
-</p>
+		<p class="idunno">
+		<a>why not tho</a>
+		</p>
+
+
+
+		<p class="gotsomuchlove">
+		<a>but how do i get thru this</a>
+		</p>
+
+		<p class="turntoutamazing">
+		<a>so what should i do</a>
+		</p>
+
+		<p class="hernameisari">
+		<a href="https://www.youtube.com/watch?v=gl1aHhXnN1k&feature=youtu.be&t=202" target=”_blank”>k, send me to ari &hearts;</a>
+		</p>
+	</div>
 </div>
-
 
 <iframe src="silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
 
@@ -130,14 +235,13 @@
 
 </body>
 
-
-
+<!--
 
 	<script>
 
 
 var colour="random"; // "random" can be replaced with any valid colour ie: "red"...
-var sparkles=1000;// increase of decrease for number of sparkles falling
+var sparkles=100;// increase of decrease for number of sparkles falling
 
 var x=ox=400;
 var y=oy=300;
@@ -398,13 +502,8 @@ function newColour() {
 // ]]>
 
 
-(function titleMarquee() {
-    document.title = document.title.substring(1)+document.title.substring(0,1);
-    setTimeout(titleMarquee, 200);
-})();
-
 </script>
-
+-->
 
 
 </html>
