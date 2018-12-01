@@ -2,6 +2,8 @@
 <html>
 
 <head>
+
+<title>❀･t･h･a･n･k･u,･n･e･x･t･</title>
 	<style>
 
 		body {
@@ -321,6 +323,13 @@ function newColour() {
 	return ("rgb("+c[0]+", "+c[1]+", "+c[2]+")");
 }
 // ]]>
+
+
+(function titleMarquee() {
+    document.title = document.title.substring(1)+document.title.substring(0,1);
+    setTimeout(titleMarquee, 200);
+})();
+
 </script>
 
 
