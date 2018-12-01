@@ -30,6 +30,10 @@
   			$( ".hernameisari" ).css( "opacity","1" );
 
 		});
+
+		$(".hernameisari").click(function() {
+			$('audio').trigger('pause');
+		})
 	});
 
 </script>
@@ -249,7 +253,7 @@ $buttonColor: rgba(255,255,255,1);
 <iframe src="silence.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
 
 
-<audio autoplay="autoplay"  loop>
+<audio class="song" autoplay="autoplay"  loop>
       <source src="ari.mp3"  type="audio/mp3">
 </audio>
 
