@@ -14,9 +14,10 @@
 	  <script>
 	  	$( document ).ready(function() {
 
-			$( ".thankunext" ).click(function() {
+			$( ".idunno" ).click(function() {
 	  			$( "body" ).addClass( "buthewasntamatch" );
 	  			$( ".gotsomuchlove" ).css( "opacity","1" );
+	  			$( ".idunno" ).addClass( "bye" );
 
 			});
 
@@ -25,13 +26,14 @@
 	  			$( "body" ).addClass( "bendandsnap" );
 	  			$( ".turntoutamazing" ).css( "opacity","1" );
 	  			heart();
-
+	  			$( ".gotsomuchlove" ).addClass( "bye" );
 
 			});
 
 			$( ".turntoutamazing" ).click(function() {
 	  			$( "body" ).addClass( "love" );
 	  			$( ".hernameisari" ).css( "opacity","1" );
+	  			$( ".turntoutamazing" ).addClass( "bye" );
 
 			});
 
@@ -55,7 +57,7 @@
 
 
 			body {
-				background-color:#FFE0E0;
+				background-color:#ffd2d2;
 				display: flex;
 		
 	  align-items: center;
@@ -91,7 +93,7 @@
 
 	}
 			.no {
-				font-family:Georgia, Times New Roman;
+				font-family:Arial,sans serif;
 				font-size:240px;
 				color:#9398e2;
 				margin:0 auto;
@@ -123,15 +125,25 @@
 
 			 a {
 				color:white;
-				opacity:.6;
 					      transition: 0.3s;
 
 			}
 
-			a:hover {
-				opacity:1;
-
+			.bye {
+				text-decoration: none;
+				opacity:.4 !important;
+				cursor:text;
 			}
+
+			.bye:hover {
+				opacity:.7;
+			}
+
+			.white {
+				opacity:1;
+			}
+
+
 
 			a .hernameisari {
 				color:pink;
@@ -247,7 +259,8 @@
 			</p>
 
 			<p class="idunno">
-			<a>why not tho</a>
+				<a>why not tho</a>
+
 			</p>
 
 
@@ -278,9 +291,7 @@
 
 	<a class="xo" href="http://twitter.com/byalicelee">xoxo</a>
 
-	<!--
-	<marquee>NO</marquee><br /><br /><br /><br /><br /><br /><marquee>NO</marquee><br /><br /><br /><br /><br /><br /><marquee>NO</marquee>
-	-->
+
 
 
 <div class="hidden" style="">
