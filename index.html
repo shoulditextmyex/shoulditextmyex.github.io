@@ -16,7 +16,7 @@
 
 			$( ".idunno" ).click(function() {
 	  			$( "body" ).addClass( "buthewasntamatch" );
-	  			$( ".gotsomuchlove" ).css( "opacity","1" );
+	  			$( ".gotsomuchlove" ).addClass("hi");
 	  			$( ".idunno" ).addClass( "bye" );
 
 			});
@@ -24,15 +24,14 @@
 
 			$( ".gotsomuchlove" ).click(function() {
 	  			$( "body" ).addClass( "bendandsnap" );
-	  			$( ".turntoutamazing" ).css( "opacity","1" );
-	  			heart();
+	  			$( ".turntoutamazing").addClass("hi");
 	  			$( ".gotsomuchlove" ).addClass( "bye" );
 
 			});
 
 			$( ".turntoutamazing" ).click(function() {
 	  			$( "body" ).addClass( "love" );
-	  			$( ".hernameisari" ).css( "opacity","1" );
+	  			$( ".hernameisari" ).addClass("hi");
 	  			$( ".turntoutamazing" ).addClass( "bye" );
 
 			});
@@ -101,7 +100,7 @@
 				  text-transform:uppercase;
 				  font-weight:600;
 				  letter-spacing:4px;
-	 
+	 padding-left: 18px;
 			}
 
 
@@ -111,11 +110,16 @@
 	    color: #e68bd3;
 	    text-decoration: underline;
 	      transition: 0.3s;
+	      z-index:-10;
 
 			}
 
+			.idunno {
+				z-index:10;
+			}
+
 			.idunno:hover, .gotsomuchlove:hover, .turntoutamazing:hover {
-				cursor: pointer !important;
+				cursor: pointer;
 
 			}
 
@@ -129,6 +133,10 @@
 
 			}
 
+.hi {
+	opacity:1;
+	z-index:10;
+}
 			.bye {
 				text-decoration: none;
 				opacity:.4 !important;
@@ -171,7 +179,16 @@
 		right:30px;
 	}
 
-	a.xo {
+
+	.thankful {
+		position:absolute;
+		bottom:30px;
+		left:30px;
+		color:#9398e2;
+	}
+
+
+	a.xo, a.thankful {
 		color: #f9bcb8;
 		opacity:.5;
 		text-decoration:none;
@@ -179,7 +196,7 @@
 
 	}
 
-	a.xo:hover {
+	a.xo:hover, a.thankful:hover  {
 		opacity:1;
 	}
 
@@ -230,6 +247,18 @@
 
 	}
 
+
+.tooltip {
+    text-decoration:none;
+}
+.tooltip span {
+    display:none;
+}
+.tooltip:hover span {
+    display:block;
+    position:fixed;
+    overflow:hidden;
+}
 
 
 
@@ -290,6 +319,16 @@
 
 
 	<a class="xo" href="http://twitter.com/byalicelee">xoxo</a>
+	<a class=" regular tooltip ">
+		<a class="thankful tooltip">
+	    thankful <span class="always" style="margin-top:-10px;">always &hearts;</span>
+	    <span id="tooltip-span">
+	        <img style="width:300px;" alt="" src="https://media.giphy.com/media/rGkrMvDZwkCuA/giphy.gif" />
+	    </span>
+
+
+	</a>
+</a>
 
 
 
